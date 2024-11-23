@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index2.html">
+    <title>Planes</title>
+</head>
+
+<body>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: white;
+            background-color: #000;
+        }
+
+        /* *********** */
+/* ENCABEZADO - MENU */
+/* *********** */
+.contenedor-header{
+    width: 100%;
+    margin-top: 0;
+    position: top;
+    border-bottom: 1px solid #1f283e;
+    background-color: rgba(0,0,0,.7);
+    z-index: 99;
+    padding: 0 20px;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    color: #fff;
+}
+.txtverde{
+    color: #10f5c8;
+}
+.contenedor-header header nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.contenedor-header header nav a:hover{
+    color: #10f5c8;
+}
+.contenedor-header header .redes a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 8px;
+}
+.contenedor-header header .redes a:hover{
+    color: #10f5c8;
+}
+.nav-responsive{
+    display: none;
+    font-size: 25px;
+ }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 350px;
+            margin: 20px;
+        }
+
+        .card .face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .card .front {
+            transform: perspective(600px) rotate(0deg);
+            box-shadow: 0 5px 10px #000;
+
+        }
+
+        .card .front img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        .card .front h3 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            color: #fff;
+            background: rgb(0, 0, 0, .4);
+            text-align: center;
+        }
+
+        .card .back {
+            transform: perspective(600px) rotatey(180deg);
+            background: rgb(3, 35, 54);
+            color: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            box-shadow: 0 5px 10px #000;
+        }
+
+        .card .back .link {
+            border-top: solid 1px #f3f3f3;
+            height: 50px;
+            line-height: 50px;
+
+        }
+
+        .card .back .link a {
+            color: #f3f3f3;
+
+        }
+
+        .card .back h3 {
+            font-size: 30px;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+
+        .card .back p {
+            letter-spacing: 1px;
+        }
+
+        .card:hover .front {
+            transform: perspective(600px) rotateY(180deg);
+        }
+
+        .card:hover .back {
+            transform: perspective(600px) rotateY(360deg);
+        }
+
+        .botton2 {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .btn-1 {
+            display: inline-block;
+            background-color: rgb(112, 164, 233);
+            border: 0px;
+            padding: 20px;
+            color: black;
+            margin-right: 200px;
+            margin-left: 200px;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 57px;
+            background-image: linear-gradient(to right, purple, cyan);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+
+        }
+
+
+        .btn-1:hover{
+            background-color: #40739e;
+        }
+
+
+    </style>
+
+      <!-- MENU -->
+
+      <div class="contenedor-header">
+        <header>
+            <h1>THE <span class="txtverde">GYM3S</span></h1>
+            <nav id="nav">
+                <a href="index2.html" onclick="seleccionar()">Inicio</a>
+            </nav>
+            <div class="redes">
+                <a href="https://www.facebook.com/share/6g5xxX7HQZD9QRBj/?mibextid=LQQJ4d">
+                    <i class="fa-brands fa-facebook-f"></i></a>
+                <a href="mailto:gym3s2024@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.instagram.com/gimnasio_3s/profilecard/?igsh=MXExYTVyOXA2NWNtYw=="><i
+                    class="fa-brands fa-instagram"></i></a>
+            </div>
+            <!-- Icono del menu responsive -->
+            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>                
+        </header>
+    </div>
+
+
+    <div>
+        <h1>Precios</h1>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="img/mes.jpeg" alt="">
+            <h3>Mensualidad</h3>
+
+        </div>
+
+        <div class="face back">
+            <h3>Mensualidad</h3>
+            <p>$ 70.000</p>
+            <div class="link">
+                <a href="index2.html" target="_blank">Conoce más</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="img/15dias.jpeg" alt="">
+            <h3>15 dias</h3>
+
+        </div>
+
+        <div class="face back">
+            <h3>15 dias</h3>
+            <p>$ 40.000</p>
+            <div class="link">
+                <a href="index2.html" target="_blank">Conoce más</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="face front">
+            <img src="img/1dia.jpeg" alt="">
+            <h3>1 día</h3>
+
+        </div>
+
+        <div class="face back">
+            <h3>1 día</h3>
+            <p>$ 8.000</p>
+            <div class="link">
+                <a href="index2.html" target="_blank">Conoce más</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

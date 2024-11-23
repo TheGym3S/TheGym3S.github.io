@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index2.html">
+    <title>Contacto</title>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <div class="contenedor-header">
+        <header>
+            <h1>THE <span class="txtverde">GYM3S</span></h1>
+            <nav id="nav">
+                <a href="index2.html" onclick="seleccionar()">Inicio</a>
+            </nav>
+            <div class="redes">
+                <a href="https://www.facebook.com/share/6g5xxX7HQZD9QRBj/?mibextid=LQQJ4d">
+                    <i class="fa-brands fa-facebook-f"></i></a>
+                <a href="mailto:gym3s2024@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.instagram.com/gimnasio_3s/profilecard/?igsh=MXExYTVyOXA2NWNtYw=="><i
+                    class="fa-brands fa-instagram"></i></a>
+            </div>
+            <!-- Icono del menu responsive -->
+            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="numero">
+                    06
+                </div>
+                <div class="info">
+                    <span class="frase">PÁSALA CHÉVERE</span>
+                    <h2>CONTACTO</h2>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <p>
+                    <form action="mailto:eslen.garces@correounivalle.edu.co" method="POST" enctype="TEXT/PLAIN"> Tu
+                        Email:
+                        <input type="text" name="email">
+                </div>
+                <div class="col">
+                    <p>
+                    <form action="mailto:eslen.garces@correounivalle.edu.co" method="POST" enctype="TEXT/PLAIN"> Tu
+                        Nombre:
+                        <input type="text" name="Nombre">
+                </div>
+            </div>
+            <div class="mensaje">
+                <textarea name="Comentarios" id="" cols="40" rows="10" placeholder="Ingrese Mensaje"></textarea>
+                <form action="mailto:eslen.garces@correounivalle.edu.co" method="POST" enctype="TEXT/PLAIN"><input
+                        type="reset" value="Borrar datos"><button>Enviar Mensaje</button></form>
+
+            </div>
+            <div class="fila-datos">
+                <div class="col">
+                    <i class="fa-solid fa-location-dot"></i> Rozo, la Virginia-Palmira
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-phone"></i>
+                    <ul>
+                    <p><li>+57 313 6629031</li></p>
+                    <p><li>+57 311 7923539</li></p>
+                    <p><li>+57 312 2734647</li></p>
+                    </ul> 
+                    
+                </div>
+                <div class="col">
+                    <i class="fa-regular fa-clock"></i> Lunes a Sabado, 6:00a.m - 10:00p.m
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+                <script src="menu.js"></script>
+
+
+</body>
+
+</html>
